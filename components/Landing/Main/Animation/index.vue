@@ -1,3 +1,3 @@
 <template>
-  <LandingMain />
+  <h1>Animation</h1>
 </template>

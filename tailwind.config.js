@@ -9,8 +9,16 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      montserrat: ["Montserrat", "sans-serif"],
+      dopis: ["Dopis", "sans-serif"],
+    },
+
+    extend: {
+      colors: {
+        pink: "#FF006F",
+      },
+    },
   },
   plugins: [],
-}
-
+};
