@@ -16,5 +16,8 @@
     "postcss": "^8.4.28",
     "sass": "^1.66.1",
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@morev/vue-transitions": "^2.3.6"
   }
 }

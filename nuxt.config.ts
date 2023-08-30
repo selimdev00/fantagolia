@@ -7,5 +7,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["nuxt-icon"],
+  modules: ["@morev/vue-transitions/nuxt", "nuxt-icon"],
 });

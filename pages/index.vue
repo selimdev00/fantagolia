@@ -1,3 +1,7 @@
 <template>
-  <LandingMain />
+  <div>
+    <LandingMain />
+
+    <LandingGame />
+  </div>
 </template>
