@@ -64,7 +64,7 @@ const toggleQuestion = (index: number): void => {
                 {{ item.question }}
               </h2>
 
-              <span class="text-[42px] w-[42px] h-[42px] relative">
+              <span class="text-[42px] w-[42px] h-[42px] relative group-[.is-active]:text-pink transition-all duration-150">
                 <transition-fade>
                   <Icon
                     v-if="item.active"
