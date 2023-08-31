@@ -8,4 +8,8 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@morev/vue-transitions/nuxt", "nuxt-icon"],
+  nitro: {},
+  app: {
+    baseURL: "/fantagolia",
+  },
 });
