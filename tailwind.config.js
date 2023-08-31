@@ -25,6 +25,9 @@ module.exports = {
           2: "#330B59",
           3: '#482A5D'
         },
+        skype: '#0078D7',
+        telegram: '#2AABEE',
+        whatsapp: '#25D366'
       },
     },
   },
