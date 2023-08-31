@@ -23,6 +23,7 @@ module.exports = {
         },
         violet: {
           2: "#330B59",
+          3: '#482A5D'
         },
       },
     },

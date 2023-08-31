@@ -3,5 +3,7 @@
     <LandingMain />
 
     <LandingGame />
+
+    <LandingFAQ />
   </div>
 </template>

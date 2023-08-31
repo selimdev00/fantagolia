@@ -54,7 +54,7 @@ const usefulForItems = ref([
           <div
             v-for="(item, index) in usefulForItems"
             :key="`item-${index}}`"
-            class="flex flex-col pt-[36px] pb-[30px] bg-violet-2 text-center items-center gap-3 px-8"
+            class="flex flex-col pt-[36px] pb-[30px] bg-violet-2 text-center items-center justify- gap-3 px-8 rounded-[8px]"
           >
             <img :src="item.icon" class="w-[86px] h-[86px]" />
 
