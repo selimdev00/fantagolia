@@ -40,11 +40,11 @@ setTimeout(() => {
 
 <template>
   <div
-    class="absolute w-[275px] h-[300px] bg-[url('/images/Main/Animation/blue-thunder/bg.png')] bg-[left] right-[120px] top-[200px]"
+    class="absolute w-[275px] h-[300px] bg-[url('images/Main/Animation/blue-thunder/bg.png')] bg-[left] right-[120px] top-[200px]"
   >
     <img
       v-if="showImage"
-      :src="`/images/Main/Animation/blue-thunder/${imageIndex}.png`"
+      :src="`images/Main/Animation/blue-thunder/${imageIndex}.png`"
       alt=""
     />
   </div>

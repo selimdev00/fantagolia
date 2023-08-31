@@ -20,12 +20,12 @@ setInterval(() => {
 
 <template>
   <div
-    class="absolute top-[215px] left-[340px] bg-purple rounded-full w-[352px] h-[352px]"
+    class="absolute top-[170px] left-[310px] bg-purple rounded-full w-[352px] h-[352px]"
   >
     <TransitionFade>
       <img
         v-if="showImage"
-        :src="`/images/Main/Animation/circle-images/${imageIndex}.png`"
+        :src="`images/Main/Animation/circle-images/${imageIndex}.png`"
         class="w-full h-full"
       />
     </TransitionFade>

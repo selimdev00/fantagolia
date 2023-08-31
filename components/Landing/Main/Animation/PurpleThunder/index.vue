@@ -40,13 +40,12 @@ setTimeout(() => {
 
 <template>
   <div
-    class="absolute w-[275px] h-[300px] bg-[url('/images/Main/Animation/purple-thunder/bg.png')] bg-[left] left-[280px] bottom-[300px]"
-    @click="handleClick"
+    class="absolute w-[275px] h-[300px] bg-[url('images/Main/Animation/purple-thunder/bg.png')] bg-[left] left-[280px] bottom-[300px]"
   >
     <transition-fade>
       <img
         v-if="showImage"
-        :src="`/images/Main/Animation/purple-thunder/${imageIndex}.png`"
+        :src="`images/Main/Animation/purple-thunder/${imageIndex}.png`"
         alt=""
       />
     </transition-fade>

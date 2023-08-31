@@ -8,7 +8,11 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@morev/vue-transitions/nuxt", "nuxt-icon"],
-  nitro: {},
+  nitro: {
+    rollupConfig: {
+      external: true,
+    },
+  },
   app: {
     baseURL: "/fantagolia",
   },

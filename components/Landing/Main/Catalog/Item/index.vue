@@ -15,7 +15,7 @@ const props = defineProps<CatalogItemProps>();
         {{ props.item.title }}
         <img
           class="inline relative bottom-1 left-1"
-          src="/images/Main/Catalog/Item/adult.png"
+          src="images/Main/Catalog/Item/adult.png"
           alt=""
         />
       </h2>

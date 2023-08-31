@@ -2,27 +2,27 @@
 const usefulForItems = ref([
   {
     name: "IT сферы",
-    icon: "/images/Main/Game/Icons/1.png",
+    icon: "images/Main/Game/Icons/1.png",
   },
   {
     name: "Ресторанного бизнеса",
-    icon: "/images/Main/Game/Icons/2.png",
+    icon: "images/Main/Game/Icons/2.png",
   },
   {
     name: "Ритейла e-commerce",
-    icon: "/images/Main/Game/Icons/3.png",
+    icon: "images/Main/Game/Icons/3.png",
   },
   {
     name: "Строительных компаний",
-    icon: "/images/Main/Game/Icons/4.png",
+    icon: "images/Main/Game/Icons/4.png",
   },
   {
     name: "Рекламного бизнеса",
-    icon: "/images/Main/Game/Icons/5.png",
+    icon: "images/Main/Game/Icons/5.png",
   },
   {
     name: "Прочие услуги",
-    icon: "/images/Main/Game/Icons/6.png",
+    icon: "images/Main/Game/Icons/6.png",
   },
 ]);
 </script>
