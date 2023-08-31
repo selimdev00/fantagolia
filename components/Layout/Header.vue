@@ -38,7 +38,7 @@ const nav = ref([
         </ul>
 
         <p
-          class="font-dopis font-semibold text-lg text-pink relative left-[120px]"
+          class="font-dopis font-medium text-lg text-pink relative left-[120px]"
         >
           +7 (495) 118-43-49
         </p>

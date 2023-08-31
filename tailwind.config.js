@@ -20,6 +20,8 @@ module.exports = {
         purple: "#1C0030",
         gray: {
           text: "#BAB2C0",
+          'text-2': "#828282",
+          'text-3': "#4F4F4F"
         },
         violet: {
           2: "#330B59",
