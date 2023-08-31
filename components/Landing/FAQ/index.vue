@@ -53,11 +53,11 @@ const toggleQuestion = (index: number): void => {
           <li
             v-for="(item, index) in questions"
             :key="`faq-item-${index}}`"
-            class="group flex flex-col pt-[26px] max-h-[113px] linear transition-all text-gray-text"
+            class="group flex flex-col pt-[26px] max-h-[113px] linear transition-all text-gray-text border-b border-violet-3"
             :class="{ 'is-active !max-h-full': item.active }"
           >
             <div
-              class="flex w-full justify-between items-center cursor-pointer group-[.is-active]:text-white"
+              class="flex w-full justify-between items-center cursor-pointer group-[.is-active]:text-white "
               @click="toggleQuestion(index)"
             >
               <h2 class="text-[28px] leading-[60px]">
@@ -77,7 +77,7 @@ const toggleQuestion = (index: number): void => {
             </div>
 
             <p
-              class="font-light leading-[32px] pb-[26px] text-[18px] border-b border-violet-3 transition-all ease-linear duration-300 max-h-0 overflow-hidden group-[.is-active]:max-h-full max-w-[90%]"
+              class="font-light leading-[32px] pb-[26px] text-[18px]  transition-all ease-linear duration-300 max-h-0 overflow-hidden group-[.is-active]:max-h-full max-w-[90%]"
             >
               <p class="py-[26px]">
                 {{ item.answer }}
