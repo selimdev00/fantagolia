@@ -1,5 +1,12 @@
 <script lang="ts" setup>
 const MAX_INDEX = 4;
+
+const images = ref([
+  (await import("@/assets/images/Main/Animation/purple-thunder/1.png")).default,
+  (await import("@/assets/images/Main/Animation/purple-thunder/2.png")).default,
+  (await import("@/assets/images/Main/Animation/purple-thunder/3.png")).default,
+  (await import("@/assets/images/Main/Animation/purple-thunder/4.png")).default,
+]);
 const imageIndex = ref<number>(1);
 const showImage = ref<boolean>(false);
 
@@ -40,14 +47,10 @@ setTimeout(() => {
 
 <template>
   <div
-    class="absolute w-[275px] h-[300px] bg-[url('images/Main/Animation/purple-thunder/bg.png')] bg-[left] left-[280px] bottom-[300px]"
+    class="absolute w-[275px] h-[300px] bg-[url('@/assets/images/Main/Animation/purple-thunder/bg.png')] bg-[left] left-[280px] bottom-[300px]"
   >
     <transition-fade>
-      <img
-        v-if="showImage"
-        :src="`images/Main/Animation/purple-thunder/${imageIndex}.png`"
-        alt=""
-      />
+      <img v-if="showImage" :src="images[imageIndex]" alt="" />
     </transition-fade>
   </div>
 </template>

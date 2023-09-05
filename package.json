@@ -18,6 +18,8 @@
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
-    "@morev/vue-transitions": "^2.3.6"
+    "@morev/vue-transitions": "^2.3.6",
+    "jquery": "^3.7.1",
+    "jquery.ripples": "^0.6.3"
   }
 }

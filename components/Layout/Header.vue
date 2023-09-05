@@ -20,7 +20,7 @@ const nav = ref([
 </script>
 
 <template>
-  <div class="fixed top-0 -translate-x-1/2 left-1/2 z-30 w-full bg-[#1F0134]">
+  <div class="z-30 relative w-full bg-transparent">
     <div class="bg-transparent container">
       <div class="flex items-center justify-between py-[22px]">
         <h1
@@ -37,9 +37,7 @@ const nav = ref([
           </li>
         </ul>
 
-        <p
-          class="font-dopis font-medium text-lg text-pink relative left-[120px]"
-        >
+        <p class="font-dopis font-medium text-lg text-pink">
           +7 (495) 118-43-49
         </p>
       </div>

@@ -3,25 +3,25 @@ const items = ref([
   {
     title: "необычная история",
     description: "Эротическая карточная игра для влюбленных (18+)",
-    image: "images/Main/Catalog/Item/bg-2.png",
+    image: (await import("@/assets/images/Main/Catalog/Item/bg-2.png")).default,
     adult: true,
   },
   {
     title: "Веселые единороги",
     description: "Веселая карточная игра для компании друзей",
-    image: "images/Main/Catalog/Item/bg.png",
+    image: (await import("@/assets/images/Main/Catalog/Item/bg.png")).default,
     adult: false,
   },
   {
     title: "Веселые единороги",
     description: "Веселая карточная игра для компании друзей",
-    image: "images/Main/Catalog/Item/bg.png",
+    image: (await import("@/assets/images/Main/Catalog/Item/bg.png")).default,
     adult: false,
   },
   {
     title: "необычная история",
     description: "Эротическая карточная игра для влюбленных (18+)",
-    image: "images/Main/Catalog/Item/bg-2.png",
+    image: (await import("@/assets/images/Main/Catalog/Item/bg-2.png")).default,
     adult: true,
   },
 ]);

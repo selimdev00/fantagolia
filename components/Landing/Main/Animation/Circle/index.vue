@@ -1,33 +1,102 @@
 <script setup lang="ts">
-const imageIndex = ref<number>(1);
-const showImage = ref<boolean>(true);
+const images = ref([
+  {
+    src: (await import("@/assets/images/Main/Animation/circle-images/1.png"))
+      .default,
+    active: true,
+  },
+  {
+    src: (await import("@/assets/images/Main/Animation/circle-images/2.png"))
+      .default,
+    active: false,
+  },
+  {
+    src: (await import("@/assets/images/Main/Animation/circle-images/3.png"))
+      .default,
+    active: false,
+  },
+  {
+    src: (await import("@/assets/images/Main/Animation/circle-images/4.png"))
+      .default,
+    active: false,
+  },
+  {
+    src: (await import("@/assets/images/Main/Animation/circle-images/5.png"))
+      .default,
+    active: false,
+  },
+  {
+    src: (await import("@/assets/images/Main/Animation/circle-images/6.png"))
+      .default,
+    active: false,
+  },
+  {
+    src: (await import("@/assets/images/Main/Animation/circle-images/7.png"))
+      .default,
+    active: false,
+  },
+]);
 
-const slide = async () => {
-  showImage.value = false;
+const mouseIn = ref<boolean>(false);
 
-  if (imageIndex.value === 7) imageIndex.value = 1;
-  else imageIndex.value += 1;
+const onMouseEnter = () => {
+  if (mouseIn.value) return;
 
-  setTimeout(() => {
-    showImage.value = true;
-  }, 150);
+  mouseIn.value = true;
+
+  let index = images.value.findIndex((e) => e.active);
+  images.value[index].active = false;
+
+  index += 1;
+  const next = images.value[index];
+
+  if (!next) index = 0;
+  images.value[index].active = true;
 };
 
-setInterval(() => {
-  slide();
-}, 3000);
+const onMouseLeave = () => {
+  console.log("some");
+
+  mouseIn.value = false;
+};
+
+onMounted(() => {
+  $("[data-image]").map(function () {
+    $(this).ripples({
+      dropRadius: 20,
+      perturbance: 0.01,
+      resolution: 256,
+      interactive: true,
+      imageUrl: $(this).data("image-src"),
+    });
+  });
+});
 </script>
 
 <template>
-  <div
-    class="absolute top-[170px] left-[310px] bg-purple rounded-full w-[352px] h-[352px]"
-  >
-    <TransitionFade>
-      <img
-        v-if="showImage"
-        :src="`images/Main/Animation/circle-images/${imageIndex}.png`"
-        class="w-full h-full"
-      />
-    </TransitionFade>
+  <div class="w-full h-full flex items-center justify-center relative z-20">
+    <div
+      class="w-[340px] h-[340px] right-[22.2%] top-[227px] absolute"
+      @mouseenter="onMouseEnter"
+      @mouseleave="onMouseLeave"
+    >
+      <div
+        v-for="(image, index) in images"
+        :key="`image-${index}`"
+        class="absolute w-full h-full transition-all duration-150"
+        :class="{
+          'pointer-events-none': !image.active,
+        }"
+      >
+        <transition-fade>
+          <div
+            v-show="image.active"
+            class="w-full h-full rounded-full"
+            data-image
+            :data-image-src="image.src"
+          ></div>
+        </transition-fade>
+      </div>
+    </div>
   </div>
 </template>
