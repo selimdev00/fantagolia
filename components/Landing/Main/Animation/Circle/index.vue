@@ -1,37 +1,37 @@
 <script setup lang="ts">
 const images = ref([
   {
-    src: (await import("@/assets/images/Main/Animation/circle-images/1.png"))
+    src: (await import("@/assets/images/Main/Animation/circle-images/1.svg"))
       .default,
     active: true,
   },
   {
-    src: (await import("@/assets/images/Main/Animation/circle-images/2.png"))
+    src: (await import("@/assets/images/Main/Animation/circle-images/2.svg"))
       .default,
     active: false,
   },
   {
-    src: (await import("@/assets/images/Main/Animation/circle-images/3.png"))
+    src: (await import("@/assets/images/Main/Animation/circle-images/3.svg"))
       .default,
     active: false,
   },
   {
-    src: (await import("@/assets/images/Main/Animation/circle-images/4.png"))
+    src: (await import("@/assets/images/Main/Animation/circle-images/4.svg"))
       .default,
     active: false,
   },
   {
-    src: (await import("@/assets/images/Main/Animation/circle-images/5.png"))
+    src: (await import("@/assets/images/Main/Animation/circle-images/5.svg"))
       .default,
     active: false,
   },
   {
-    src: (await import("@/assets/images/Main/Animation/circle-images/6.png"))
+    src: (await import("@/assets/images/Main/Animation/circle-images/6.svg"))
       .default,
     active: false,
   },
   {
-    src: (await import("@/assets/images/Main/Animation/circle-images/7.png"))
+    src: (await import("@/assets/images/Main/Animation/circle-images/7.svg"))
       .default,
     active: false,
   },
@@ -76,7 +76,7 @@ onMounted(() => {
 <template>
   <div class="w-full h-full flex items-center justify-center relative z-20">
     <div
-      class="w-[340px] h-[340px] right-[22.2%] top-[227px] absolute"
+      class="circle__wrapper"
       @mouseenter="onMouseEnter"
       @mouseleave="onMouseLeave"
     >
@@ -100,3 +100,12 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.circle {
+  &__wrapper {
+    @apply w-[340px] h-[340px] bottom-[38%] absolute;
+    right: clamp(0px, 25%, 210px);
+  }
+}
+</style>

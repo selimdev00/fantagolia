@@ -2,27 +2,27 @@
 const usefulForItems = ref([
   {
     name: "IT сферы",
-    icon: await import("@/assets/images/Game/Icons/1.png"),
+    icon: await import("@/assets/images/Game/Icons/1.svg"),
   },
   {
     name: "Ресторанного бизнеса",
-    icon: await import("@/assets/images/Game/Icons/2.png"),
+    icon: await import("@/assets/images/Game/Icons/2.svg"),
   },
   {
     name: "Ритейла e-commerce",
-    icon: await import("@/assets/images/Game/Icons/3.png"),
+    icon: await import("@/assets/images/Game/Icons/3.svg"),
   },
   {
     name: "Строительных компаний",
-    icon: await import("@/assets/images/Game/Icons/4.png"),
+    icon: await import("@/assets/images/Game/Icons/4.svg"),
   },
   {
     name: "Рекламного бизнеса",
-    icon: await import("@/assets/images/Game/Icons/5.png"),
+    icon: await import("@/assets/images/Game/Icons/5.svg"),
   },
   {
     name: "Прочие услуги",
-    icon: await import("@/assets/images/Game/Icons/6.png"),
+    icon: await import("@/assets/images/Game/Icons/6.svg"),
   },
 ]);
 </script>
@@ -55,9 +55,9 @@ const usefulForItems = ref([
             <div
               v-for="(item, index) in usefulForItems"
               :key="`item-${index}}`"
-              class="flex flex-col pt-[36px] pb-[30px] bg-violet-2 text-center items-center justify- gap-3 px-8 rounded-[8px]"
+              class="flex flex-col pt-[36px] pb-[30px] bg-violet-2 text-center items-center justify-center gap-12 px-8 rounded-[8px]"
             >
-              <img :src="item.icon.default" class="w-[86px] h-[86px]" />
+              <img :src="item.icon.default" class="w-[52px] h-[52px]" />
 
               <p class="font-bold leading-[28px] text-[18px]">
                 {{ item.name }}

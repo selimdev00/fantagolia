@@ -2,10 +2,10 @@
 const MAX_INDEX = 4;
 
 const images = ref([
-  (await import("@/assets/images/Main/Animation/blue-thunder/1.png")).default,
-  (await import("@/assets/images/Main/Animation/blue-thunder/2.png")).default,
-  (await import("@/assets/images/Main/Animation/blue-thunder/3.png")).default,
-  (await import("@/assets/images/Main/Animation/blue-thunder/4.png")).default,
+  (await import("@/assets/images/Main/Animation/blue-thunder/1.svg")).default,
+  (await import("@/assets/images/Main/Animation/blue-thunder/2.svg")).default,
+  (await import("@/assets/images/Main/Animation/blue-thunder/3.svg")).default,
+  (await import("@/assets/images/Main/Animation/blue-thunder/4.svg")).default,
 ]);
 const imageIndex = ref<number>(1);
 const showImage = ref<boolean>(false);
@@ -47,7 +47,7 @@ setTimeout(() => {
 
 <template>
   <div
-    class="absolute w-[275px] h-[300px] bg-[url('@/assets/images/Main/Animation/blue-thunder/bg.png')] bg-[left] right-[120px] top-[200px]"
+    class="absolute w-[275px] h-[300px] bg-[url('@/assets/images/Main/Animation/blue-thunder/bg.png')] bg-[left] bg-contain right-[120px] top-[200px]"
   >
     <img v-if="showImage" :src="images[imageIndex]" alt="" />
   </div>

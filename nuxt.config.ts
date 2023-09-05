@@ -1,3 +1,5 @@
+import path from "path";
+
 export default defineNuxtConfig({
   css: ["@/assets/scss/main.scss"],
   postcss: {
@@ -7,8 +9,13 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@morev/vue-transitions/nuxt", "nuxt-icon"],
+  nitro: {
+    output: {
+      publicDir: path.join(__dirname, "dist/fantagolia"),
+    },
+  },
   app: {
-    baseURL: "/fantagolia",
+    baseURL: "/",
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "page", mode: "out-in" },
     head: {

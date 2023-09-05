@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen max-h-screen bg-[url('@/assets/images/Main/Animation/bg.png')] bg-center bg-local flex items-center relative bottom-[70px]"
+    class="h-screen max-h-screen bg-[url('@/assets/images/Main/Animation/bg.png')] bg-center flex items-center relative bottom-[70px]"
   >
     <div class="container h-full">
       <div class="ml-[4px] mt-[4px] flex items-center justify-between">
