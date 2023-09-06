@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: "/",
+    baseURL: "/fantagolia",
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "page", mode: "out-in" },
     head: {

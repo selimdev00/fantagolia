@@ -1,9 +1,22 @@
+<script setup lang="ts">
+const { loading } = useLoading();
+</script>
+
 <template>
-  <div class="min-h-screen text-white bg-[#1F0135]">
-    <LayoutHeader />
+  <div class="bg-[#1F0135]">
+    <Loading v-if="loading" />
 
-    <slot />
+    <div
+      :class="{ 'opacity-0': loading, 'opacity-100': !loading }"
+      class="transition-all duration-300"
+    >
+      <div class="min-h-screen text-white">
+        <LayoutHeader />
 
-    <LayoutFooter />
+        <slot />
+
+        <LayoutFooter />
+      </div>
+    </div>
   </div>
 </template>

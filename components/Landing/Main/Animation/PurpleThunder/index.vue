@@ -47,7 +47,7 @@ setTimeout(() => {
 
 <template>
   <div
-    class="absolute w-[275px] h-[300px] bg-[url('@/assets/images/Main/Animation/purple-thunder/bg.png')] bg-contain bg-[left] left-[280px] bottom-[300px]"
+    class="absolute w-[275px] h-[300px] bg-[url('@/assets/images/Main/Animation/purple-thunder/bg.png')] bg-contain bg-[left] left-[280px] bottom-[300px] mix-blend-screen"
   >
     <transition-fade>
       <img v-if="showImage" :src="images[imageIndex]" alt="" />
