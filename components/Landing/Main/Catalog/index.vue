@@ -34,9 +34,9 @@ const wrapper = ref(null);
 onMounted(() => {
   ScrollTrigger.batch("[data-catalog-item]", {
     preventOverlaps: true,
-    onEnter: (batch) => {
-      batch.forEach((item, index) => {
-        gsap.to(item, {
+    onEnter: (elements) => {
+      elements.forEach((element, index) => {
+        gsap.to(element, {
           opacity: 1,
           stagger: 0.1,
           delay: 0.5 * index,
