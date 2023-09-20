@@ -55,57 +55,67 @@ const onMouseEnter = () => {
 };
 
 const onMouseLeave = () => {
-  console.log("some");
-
   mouseIn.value = false;
 };
 
 onMounted(() => {
-  $("[data-image]").map(function () {
-    $(this).ripples({
-      dropRadius: 20,
-      perturbance: 0.01,
-      resolution: 256,
-      interactive: true,
-      imageUrl: $(this).data("image-src"),
-    });
-  });
+  setTimeout(() => {
+    $("[data-image]").map(function () {
+      $(this).ripples({
+        dropRadius: 20,
+        perturbance: 0.01,
+        resolution: 256,
+        interactive: true,
+        imageUrl: $(this).data("image-src"),
+      });
+    }, 50);
+  }, 500);
 });
 </script>
 
 <template>
   <div class="w-full h-full flex items-center justify-center relative z-20">
     <div
-      class="circle__wrapper"
-      @mouseenter="onMouseEnter"
-      @mouseleave="onMouseLeave"
+      class="flex flex-col items-center justify-center absolute left-10 w-[inherit]"
     >
       <div
-        v-for="(image, index) in images"
-        :key="`image-${index}`"
-        class="absolute w-full h-full transition-all duration-150"
-        :class="{
-          'pointer-events-none': !image.active,
-        }"
+        class="w-[340px] h-[340px] relative top-[68px] z-10"
+        @mouseenter="onMouseEnter"
+        @mouseleave="onMouseLeave"
       >
-        <transition-fade>
+        <LandingMainAnimationBlueThunder class="top-[-50px] right-[-80px]" />
+
+        <LandingMainAnimationPurpleThunder
+          class="bottom-[-80px] left-[-50px]"
+        />
+
+        <transition-group>
           <div
-            v-show="image.active"
-            class="w-full h-full rounded-full"
-            data-image
-            :data-image-src="image.src"
-          ></div>
-        </transition-fade>
+            v-for="(image, index) in images"
+            :key="`image-${index}`"
+            class="absolute w-full h-full transition-all duration-150"
+            :class="{
+              'pointer-events-none': !image.active,
+            }"
+          >
+            <transition-fade>
+              <div
+                v-show="image.active"
+                class="w-full h-full rounded-full"
+                data-image
+                :data-image-src="image.src"
+              ></div>
+            </transition-fade>
+          </div>
+        </transition-group>
+      </div>
+
+      <div class="w-[800px]">
+        <img
+          class="h-full w-full relative left-2"
+          src="@/assets/images/Main/Animation/circle/footer.png"
+        />
       </div>
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.circle {
-  &__wrapper {
-    @apply w-[340px] h-[340px] bottom-[38%] absolute;
-    right: clamp(0px, 25%, 210px);
-  }
-}
-</style>

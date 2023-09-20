@@ -15,10 +15,10 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: "/fantagolia",
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "page", mode: "out-in" },
     head: {
+      title: "Fantagolia",
       script: [
         {
           src: "https://code.jquery.com/jquery-3.7.1.min.js",
@@ -30,5 +30,8 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  build: {
+    transpile: ["gsap"],
   },
 });

@@ -7,11 +7,5 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
-    <LandingMain />
-
-    <LandingGame />
-
-    <LandingFAQ />
-  </div>
+  <h1>About</h1>
 </template>
