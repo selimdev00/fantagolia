@@ -50,12 +50,14 @@ onMounted(() => {
   <div class="z-30 relative w-full bg-transparent">
     <div class="bg-transparent container">
       <div class="flex items-center justify-between py-[22px]">
-        <h1
-          class="text-[40px] font-semibold leading-[120%] font-montserrat grow-[0.06]"
-          data-header-logo
+        <nuxt-link to="/"
+          ><h1
+            class="text-[40px] font-semibold leading-[120%] font-montserrat grow-[0.06]"
+            data-header-logo
+          >
+            LOGO
+          </h1></nuxt-link
         >
-          LOGO
-        </h1>
 
         <ul class="flex items-center gap-[52px] font-dopis">
           <li

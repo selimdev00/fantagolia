@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import transitionConfig from "~/helpers/transition-config";
-
-definePageMeta({
-  pageTransition: transitionConfig,
-});
-</script>
-
 <template>
   <div>
     <LandingMain />

@@ -37,6 +37,7 @@ const items = ref([
       :key="`catalog-item-${index}`"
       :item="item"
       data-aos="fade-up"
+      :data-aos-delay="index * 100"
     />
   </div>
 </template>
