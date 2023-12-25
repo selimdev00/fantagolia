@@ -9,11 +9,6 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@morev/vue-transitions/nuxt", "nuxt-icon"],
-  nitro: {
-    output: {
-      publicDir: path.join(__dirname, "dist/fantagolia"),
-    },
-  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     layoutTransition: { name: "page", mode: "out-in" },
