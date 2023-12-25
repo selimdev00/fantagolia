@@ -48,12 +48,12 @@ const toggleQuestion = (index: number): void => {
     <div class="container font-dopis flex flex-col gap-[29px]">
       <h1 class="font-bold text-[64px] leading-[96px]">FAQ</h1>
 
-      <div class="grid grid-cols-2">
+      <div class="grid lg:grid-cols-2">
         <ul class="flex flex-col">
           <li
             v-for="(item, index) in questions"
             :key="`faq-item-${index}}`"
-            class="group flex flex-col pt-[26px] max-h-[113px] linear transition-all text-gray-text border-b border-violet-3"
+            class="group flex flex-col pt-[26px] max-h-[153px] linear transition-all text-gray-text border-b border-violet-3"
             :class="{ 'is-active !max-h-full': item.active }"
           >
             <div

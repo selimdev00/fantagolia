@@ -31,14 +31,16 @@ const usefulForItems = ref([
   <div class="mt-24">
     <div class="container font-dopis flex flex-col gap-20 items-start">
       <div class="flex flex-col gap-[52px] mt-[68px]">
-        <div class="flex items-center justify-between gap-[340px]">
+        <div
+          class="flex lg:flex-row flex-col items-center justify-between xl:gap-[340px] gap-[40px]"
+        >
           <h1
-            class="font-bold leading-[96px] text-[64px] uppercase min-w-[400px]"
+            class="font-bold leading-[96px] lg:text-[64px] md:text-[44px] uppercase md:min-w-[400px]"
           >
             Создать свою игру
           </h1>
 
-          <p class="text-[24px] leading-[36px] opacity-80">
+          <p class="lg:text-[24px] md:text-[18px] leading-[36px] opacity-80">
             В 365 Media Group мы занимаемся внедрением механик геймификации в
             бизнес. Это позволяет нашим клиентам повышать свою продуктивность,
             более эффективно достигать поставленных целей. Закажите разработку
@@ -51,7 +53,7 @@ const usefulForItems = ref([
             Геймификация может быть полезна для:
           </p>
 
-          <div class="grid grid-cols-6 gap-[20px]">
+          <div class="grid lg:grid-cols-6 sm:grid-cols-3 gap-[20px]">
             <div
               v-for="(item, index) in usefulForItems"
               :key="`item-${index}}`"

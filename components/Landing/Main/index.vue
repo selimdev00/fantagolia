@@ -23,13 +23,15 @@ onMounted(() => {
 
 <template>
   <div
-    class="h-screen max-h-screen bg-[url('@/assets/images/Main/Animation/bg.png')] bg-center flex items-center relative bottom-[70px]"
+    class="h-screen max-h-screen bg-[url('@/assets/images/Main/Animation/bg.png')] bg-center flex lg:items-center relative bottom-[70px]"
     data-main
   >
-    <div class="container h-full overflow-hidden">
+    <div
+      class="container h-full overflow-hidden lg:block flex items-center lg:text-left text-center lg:!w-full !w-fit"
+    >
       <div class="ml-[4px] mt-[4px] flex items-center justify-between">
         <h1
-          class="font-bold font-dopis text-[80px] leading-[140%] uppercase max-w-[576px]"
+          class="font-bold font-dopis text-4xl md:text-5xl lg:text-6xl xl:text-7xl !leading-[140%] uppercase max-w-[576px]"
           data-main-title
         >
           Делаем настольные игры

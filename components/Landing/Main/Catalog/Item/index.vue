@@ -7,14 +7,17 @@ const props = defineProps<CatalogItemProps>();
 </script>
 
 <template>
-  <li class="flex h-[341px] py-14 px-[60px] relative font-dopis">
-    <img :src="props.item.image" class="absolute left-0 top-0 w-full h-full" />
+  <li class="flex h-[341px] py-14 md:px-[60px] px-[30px] relative font-dopis">
+    <img
+      :src="props.item.image"
+      class="absolute left-0 top-0 w-full h-full object-cover"
+    />
 
     <div class="flex flex-col max-w-[300px] gap-[9px] z-10">
       <h2 class="text-[36px] leading-[54px] font-bold uppercase font-dopis">
         {{ props.item.title }}
         <img
-          class="inline relative bottom-1 left-1"
+          class="inline relative bottom-1 left-1 object-cover"
           src="@/assets/images/Main/Catalog/Item/adult.png"
           alt=""
         />

@@ -31,7 +31,7 @@ const items = ref([
 </script>
 
 <template>
-  <div class="grid grid-cols-2 gap-[20px]" ref="wrapper">
+  <div class="grid lg:grid-cols-2 gap-[20px]" ref="wrapper">
     <LandingMainCatalogItem
       v-for="(item, index) in items"
       :key="`catalog-item-${index}`"

@@ -35,7 +35,7 @@ onMounted(() => {
       x: -20,
       ease: Power3.easeInOut,
     },
-    0.08
+    0.08,
   );
 
   TweenMax.from("[data-header-phone]", 2, {
@@ -49,31 +49,40 @@ onMounted(() => {
 <template>
   <div class="z-30 relative w-full bg-transparent">
     <div class="bg-transparent container">
-      <div class="flex items-center justify-between py-[22px]">
-        <nuxt-link to="/"
-          ><h1
+      <div class="flex items-center justify-between py-[22px] px-[20px]">
+        <nuxt-link to="/">
+          <h1
             class="text-[40px] font-semibold leading-[120%] font-montserrat grow-[0.06]"
             data-header-logo
           >
             LOGO
-          </h1></nuxt-link
-        >
+          </h1>
+        </nuxt-link>
 
-        <ul class="flex items-center gap-[52px] font-dopis">
+        <ul class="lg:flex hidden items-center gap-[52px] font-dopis">
           <li
             v-for="(item, index) in nav"
             :key="`header-nav-${index}}`"
             data-header-nav-item
           >
-            <nuxt-link :to="item.path" class="uppercase"
-              >{{ item.label }}
+            <nuxt-link :to="item.path" class="uppercase">
+              {{ item.label }}
             </nuxt-link>
           </li>
         </ul>
 
-        <p class="font-dopis font-medium text-lg text-pink" data-header-phone>
-          +7 (495) 118-43-49
-        </p>
+        <div class="flex items-center gap-[20px]">
+          <p
+            class="font-dopis font-medium text-lg text-pink sm:block hidden"
+            data-header-phone
+          >
+            +7 (495) 118-43-49
+          </p>
+
+          <span class="text-xl lg:hidden block">
+            <Icon name="mdi:menu" />
+          </span>
+        </div>
       </div>
     </div>
   </div>

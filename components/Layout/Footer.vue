@@ -60,10 +60,12 @@ const bottomNav = ref([
       <div
         class="mt-[182px] py-[110px] border-t border-violet-3 bg-[url('@/assets/images/Layout/castle.png')] bg-no-repeat"
       >
-        <div class="container grid grid-cols-[1.47fr_1fr_1.19fr]">
+        <div
+          class="container grid lg:grid-cols-[1.47fr_1fr_1.19fr] lg:gap-0 gap-[4rem]"
+        >
           <div class="flex flex-col items-start gap-[150px]">
             <h1
-              class="font-bold text-[64px] leading-[96px] uppercase max-w-[300px]"
+              class="font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl md:leading-[96px] uppercase max-w-[300px]"
             >
               Свяжитесь с нами
             </h1>
@@ -105,7 +107,7 @@ const bottomNav = ref([
           </div>
 
           <div
-            class="border-l border-violet-3 pl-[125px] flex flex-col gap-[70px]"
+            class="border-l border-violet-3 lg:pl-[125px] pl-[32px] flex flex-col gap-[70px]"
           >
             <div
               v-for="(item, index) in sectionLinks"
@@ -130,11 +132,13 @@ const bottomNav = ref([
 
       <div class="bg-black py-[24px]">
         <div
-          class="container text-gray-text-2 text-[18px] flex items-center justify-between"
+          class="container text-gray-text-2 text-[18px] flex flex-wrap gap-8 items-center justify-between"
         >
           <p>Название сайта © 2023</p>
 
-          <ul class="flex items-center gap-20 font-light leading-[32px]">
+          <ul
+            class="flex flex-wrap items-center lg:gap-20 gap-6 font-light leading-[32px]"
+          >
             <li
               v-for="(item, index) in bottomNav"
               :key="`bottom-nav-${index}}`"
